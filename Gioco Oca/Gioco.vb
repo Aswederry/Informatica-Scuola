@@ -192,6 +192,19 @@
 
     Private Sub Gioco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         roll = 20
+
+        If Impostazioni.colore = 0 Then
+            Me.BackColor = Color.White
+        ElseIf Impostazioni.colore = 1 Then
+            Me.BackColor = Color.Red
+        ElseIf Impostazioni.colore = 2 Then
+            Me.BackColor = Color.Yellow
+        ElseIf Impostazioni.colore = 3 Then
+            Me.BackColor = Color.Blue
+        ElseIf Impostazioni.colore = 4 Then
+            Me.BackColor = Color.Green
+        End If
+
     End Sub
 
     Public Sub Win()

@@ -27,6 +27,7 @@ Partial Class Form1
         Me.RegoleB = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -34,7 +35,7 @@ Partial Class Form1
         'Inizio
         '
         Me.Inizio.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Inizio.Location = New System.Drawing.Point(298, 172)
+        Me.Inizio.Location = New System.Drawing.Point(298, 130)
         Me.Inizio.Name = "Inizio"
         Me.Inizio.Size = New System.Drawing.Size(173, 66)
         Me.Inizio.TabIndex = 0
@@ -54,7 +55,7 @@ Partial Class Form1
         'RegoleB
         '
         Me.RegoleB.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RegoleB.Location = New System.Drawing.Point(298, 290)
+        Me.RegoleB.Location = New System.Drawing.Point(298, 233)
         Me.RegoleB.Name = "RegoleB"
         Me.RegoleB.Size = New System.Drawing.Size(173, 66)
         Me.RegoleB.TabIndex = 2
@@ -83,12 +84,23 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(298, 332)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(173, 66)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Sfondo"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(782, 453)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RegoleB)
@@ -107,4 +119,5 @@ Partial Class Form1
     Friend WithEvents RegoleB As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class

@@ -196,7 +196,8 @@ Partial Class Gioco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.tabbella
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.tabbella1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1380, 836)
         Me.Controls.Add(Me.PersoL)

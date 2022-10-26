@@ -208,9 +208,9 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property tabellone() As System.Drawing.Bitmap
+        Friend ReadOnly Property tabbella1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("tabellone", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("tabbella1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
