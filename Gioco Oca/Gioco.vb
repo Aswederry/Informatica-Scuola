@@ -17,6 +17,8 @@
         d5.Visible = False
         d6.Visible = False
 
+
+
         dado = dadoR.Next(1, 7)
 
         My.Computer.Audio.Play(My.Resources.DadoS, AudioPlayMode.Background)
@@ -40,6 +42,7 @@
             n = casella - (dado * 2)
             casella = n
         End If
+
 
         dado = 0
         roll -= 1
@@ -76,7 +79,7 @@
         If casella = 0 Then
             Giocatore1.Location = cordCaselle(0)
         ElseIf casella = 1 Then
-            Giocatore1.Location = cordCaselle(0)
+            Giocatore1.Location = cordCaselle(1)
         ElseIf casella = 2 Then
             Giocatore1.Location = cordCaselle(1)
         ElseIf casella = 3 Then
@@ -200,9 +203,19 @@
         ElseIf Impostazioni.colore = 2 Then
             Me.BackColor = Color.Yellow
         ElseIf Impostazioni.colore = 3 Then
-            Me.BackColor = Color.Blue
+            Me.BackColor = Color.Aqua
         ElseIf Impostazioni.colore = 4 Then
             Me.BackColor = Color.Green
+        End If
+
+        If Impostazioni.pedina = 0 Then
+            Giocatore1.BackgroundImage = My.Resources.oca3
+        ElseIf Impostazioni.pedina = 1 Then
+            Giocatore1.BackgroundImage = My.Resources.oca4
+        ElseIf Impostazioni.pedina = 2 Then
+            Giocatore1.BackgroundImage = My.Resources.oca5
+        ElseIf Impostazioni.pedina = 3 Then
+            Giocatore1.BackgroundImage = My.Resources.oca6
         End If
 
     End Sub
@@ -241,6 +254,7 @@
         casella -= 4
         My.Computer.Audio.Play(My.Resources.CrashS, AudioPlayMode.Background)
     End Sub
+
 
 
 End Class

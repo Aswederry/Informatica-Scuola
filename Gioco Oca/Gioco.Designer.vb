@@ -36,6 +36,7 @@ Partial Class Gioco
         Me.WinL = New System.Windows.Forms.Label()
         Me.RestartB = New System.Windows.Forms.Button()
         Me.PersoL = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Giocatore1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +51,7 @@ Partial Class Gioco
         Me.Giocatore1.BackColor = System.Drawing.Color.Transparent
         Me.Giocatore1.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.oca3
         Me.Giocatore1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Giocatore1.Location = New System.Drawing.Point(63, 732)
+        Me.Giocatore1.Location = New System.Drawing.Point(61, 732)
         Me.Giocatore1.Name = "Giocatore1"
         Me.Giocatore1.Size = New System.Drawing.Size(63, 61)
         Me.Giocatore1.TabIndex = 0
@@ -77,7 +78,6 @@ Partial Class Gioco
         Me.d1.Size = New System.Drawing.Size(121, 118)
         Me.d1.TabIndex = 4
         Me.d1.TabStop = False
-        Me.d1.Visible = False
         '
         'd2
         '
@@ -192,6 +192,10 @@ Partial Class Gioco
         Me.PersoL.Text = "Hai Perso!"
         Me.PersoL.Visible = False
         '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        '
         'Gioco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -240,4 +244,5 @@ Partial Class Gioco
     Friend WithEvents WinL As Label
     Friend WithEvents RestartB As Button
     Friend WithEvents PersoL As Label
+    Friend WithEvents Timer2 As Timer
 End Class

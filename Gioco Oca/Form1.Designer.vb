@@ -86,12 +86,12 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button1.Location = New System.Drawing.Point(298, 332)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(173, 66)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Sfondo"
+        Me.Button1.Text = "Impostazioni"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
