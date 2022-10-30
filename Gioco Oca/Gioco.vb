@@ -4,11 +4,14 @@
     Dim dadoR As New Random
     Dim n As New Integer
 
+
+    Dim turno = 1
     Dim roll As New Integer
 
     Dim cordCaselle = {New Point(65, 731), New Point(173, 733), New Point(283, 732), New Point(393, 732), New Point(499, 733), New Point(609, 733), New Point(721, 731), New Point(830, 734), New Point(941, 732), New Point(1050, 730), New Point(1161, 734), New Point(1269, 730), New Point(1272, 635), New Point(1271, 537), New Point(1273, 439), New Point(1272, 340), New Point(1269, 247), New Point(1272, 149), New Point(1271, 51), New Point(1164, 48), New Point(1052, 48), New Point(938, 46), New Point(832, 48), New Point(722, 50), New Point(612, 49), New Point(500, 48), New Point(393, 50), New Point(282, 47), New Point(172, 47), New Point(64, 46), New Point(62, 146), New Point(62, 243), New Point(62, 339), New Point(62, 438), New Point(62, 535), New Point(172, 536), New Point(284, 537), New Point(393, 539), New Point(498, 534), New Point(615, 537), New Point(720, 535), New Point(829, 534), New Point(940, 536), New Point(1051, 538), New Point(1052, 443), New Point(1049, 339), New Point(1049, 247), New Point(940, 241)}
 
     Dim casella As New Integer
+    Dim casella2 = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         d1.Visible = False
         d2.Visible = False
@@ -22,27 +25,57 @@
         dado = dadoR.Next(1, 7)
 
         My.Computer.Audio.Play(My.Resources.DadoS, AudioPlayMode.Background)
+        If turno = 1 Then
 
-        casella += dado
-        If dado = 1 Then
-            d1.Visible = True
-        ElseIf dado = 2 Then
-            d2.Visible = True
-        ElseIf dado = 3 Then
-            d3.Visible = True
-        ElseIf dado = 4 Then
-            d4.Visible = True
-        ElseIf dado = 5 Then
-            d5.Visible = True
-        ElseIf dado = 6 Then
-            d6.Visible = True
+
+            casella += dado
+            If dado = 1 Then
+                d1.Visible = True
+            ElseIf dado = 2 Then
+                d2.Visible = True
+            ElseIf dado = 3 Then
+                d3.Visible = True
+            ElseIf dado = 4 Then
+                d4.Visible = True
+            ElseIf dado = 5 Then
+                d5.Visible = True
+            ElseIf dado = 6 Then
+                d6.Visible = True
+            End If
+
+
+            If casella > 48 Then
+                n = casella - (dado * 2)
+                casella = n
+            End If
+
+            turno = 2
+
+        ElseIf turno = 2 Then
+            casella2 += dado
+            If dado = 1 Then
+                d1.Visible = True
+            ElseIf dado = 2 Then
+                d2.Visible = True
+            ElseIf dado = 3 Then
+                d3.Visible = True
+            ElseIf dado = 4 Then
+                d4.Visible = True
+            ElseIf dado = 5 Then
+                d5.Visible = True
+            ElseIf dado = 6 Then
+                d6.Visible = True
+            End If
+
+
+            If casella2 > 48 Then
+                n = casella - (dado * 2)
+                casella = n
+            End If
+
+            turno = 1
+
         End If
-
-        If casella > 48 Then
-            n = casella - (dado * 2)
-            casella = n
-        End If
-
 
         dado = 0
         roll -= 1

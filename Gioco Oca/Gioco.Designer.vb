@@ -37,6 +37,7 @@ Partial Class Gioco
         Me.RestartB = New System.Windows.Forms.Button()
         Me.PersoL = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Giocatore2 = New System.Windows.Forms.PictureBox()
         CType(Me.Giocatore1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +45,7 @@ Partial Class Gioco
         CType(Me.d4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Giocatore2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Giocatore1
@@ -196,6 +198,17 @@ Partial Class Gioco
         '
         Me.Timer2.Enabled = True
         '
+        'Giocatore2
+        '
+        Me.Giocatore2.BackColor = System.Drawing.Color.Transparent
+        Me.Giocatore2.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.Gioc2
+        Me.Giocatore2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Giocatore2.Location = New System.Drawing.Point(25, 732)
+        Me.Giocatore2.Name = "Giocatore2"
+        Me.Giocatore2.Size = New System.Drawing.Size(63, 61)
+        Me.Giocatore2.TabIndex = 14
+        Me.Giocatore2.TabStop = False
+        '
         'Gioco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -204,6 +217,7 @@ Partial Class Gioco
         Me.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.tabbella1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1380, 836)
+        Me.Controls.Add(Me.Giocatore2)
         Me.Controls.Add(Me.PersoL)
         Me.Controls.Add(Me.RestartB)
         Me.Controls.Add(Me.WinL)
@@ -226,6 +240,7 @@ Partial Class Gioco
         CType(Me.d4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.d5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.d6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Giocatore2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -245,4 +260,5 @@ Partial Class Gioco
     Friend WithEvents RestartB As Button
     Friend WithEvents PersoL As Label
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents Giocatore2 As PictureBox
 End Class
