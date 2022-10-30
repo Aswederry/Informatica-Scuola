@@ -192,7 +192,7 @@ Partial Class Gioco
         Me.Giocatore2.BackColor = System.Drawing.Color.Transparent
         Me.Giocatore2.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.Gioc2
         Me.Giocatore2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Giocatore2.Location = New System.Drawing.Point(25, 732)
+        Me.Giocatore2.Location = New System.Drawing.Point(61, 732)
         Me.Giocatore2.Name = "Giocatore2"
         Me.Giocatore2.Size = New System.Drawing.Size(63, 61)
         Me.Giocatore2.TabIndex = 14

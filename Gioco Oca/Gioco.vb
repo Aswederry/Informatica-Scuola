@@ -321,9 +321,6 @@
             End If
 
 
-        TEST.Text = casella
-        TEST2.Text = casella2
-
     End Sub
 
     Private Sub Gioco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
