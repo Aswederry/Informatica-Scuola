@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Gioco
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Gioco
     'NOTA: la procedura che segue è richiesta da Progettazione Windows Form
     'Può essere modificata in Progettazione Windows Form.  
     'Non modificarla mediante l'editor del codice.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Giocatore1 = New System.Windows.Forms.PictureBox()
@@ -32,7 +32,6 @@ Partial Class Gioco
         Me.d5 = New System.Windows.Forms.PictureBox()
         Me.d6 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Tentativi = New System.Windows.Forms.Label()
         Me.WinL = New System.Windows.Forms.Label()
         Me.RestartB = New System.Windows.Forms.Button()
         Me.PersoL = New System.Windows.Forms.Label()
@@ -146,16 +145,6 @@ Partial Class Gioco
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1
         '
-        'Tentativi
-        '
-        Me.Tentativi.BackColor = System.Drawing.Color.Transparent
-        Me.Tentativi.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Tentativi.Location = New System.Drawing.Point(172, 256)
-        Me.Tentativi.Name = "Tentativi"
-        Me.Tentativi.Size = New System.Drawing.Size(264, 39)
-        Me.Tentativi.TabIndex = 10
-        Me.Tentativi.Text = "Label1"
-        '
         'WinL
         '
         Me.WinL.AutoSize = True
@@ -221,7 +210,6 @@ Partial Class Gioco
         Me.Controls.Add(Me.PersoL)
         Me.Controls.Add(Me.RestartB)
         Me.Controls.Add(Me.WinL)
-        Me.Controls.Add(Me.Tentativi)
         Me.Controls.Add(Me.d6)
         Me.Controls.Add(Me.d5)
         Me.Controls.Add(Me.d4)
@@ -255,7 +243,6 @@ Partial Class Gioco
     Friend WithEvents d5 As PictureBox
     Friend WithEvents d6 As PictureBox
     Private WithEvents Timer1 As Timer
-    Friend WithEvents Tentativi As Label
     Friend WithEvents WinL As Label
     Friend WithEvents RestartB As Button
     Friend WithEvents PersoL As Label

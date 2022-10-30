@@ -67,36 +67,36 @@ Public Class Impostazioni
     Private Sub Pedina1_Click(sender As Object, e As EventArgs) Handles Pedina1.Click
         pedina = 0
 
-        Pedina1.Enabled = False
-        Pedina2.Enabled = True
-        Pedina3.Enabled = True
-        Pedina4.Enabled = True
+        Pedina1.Visible = False
+        Pedina2.Visible = True
+        Pedina3.Visible = True
+        Pedina4.Visible = True
     End Sub
 
     Private Sub Pedina2_Click(sender As Object, e As EventArgs) Handles Pedina2.Click
         pedina = 1
 
-        Pedina1.Enabled = True
-        Pedina2.Enabled = False
-        Pedina3.Enabled = True
-        Pedina4.Enabled = True
+        Pedina1.Visible = True
+        Pedina2.Visible = False
+        Pedina3.Visible = True
+        Pedina4.Visible = True
     End Sub
 
     Private Sub Pedina3_Click(sender As Object, e As EventArgs) Handles Pedina3.Click
         pedina = 2
 
-        Pedina1.Enabled = True
-        Pedina2.Enabled = True
-        Pedina3.Enabled = False
-        Pedina4.Enabled = True
+        Pedina1.Visible = True
+        Pedina2.Visible = True
+        Pedina3.Visible = False
+        Pedina4.Visible = True
     End Sub
 
     Private Sub Pedina4_Click(sender As Object, e As EventArgs) Handles Pedina4.Click
         pedina = 3
 
-        Pedina1.Enabled = True
-        Pedina2.Enabled = True
-        Pedina3.Enabled = True
-        Pedina4.Enabled = False
+        Pedina1.Visible = True
+        Pedina2.Visible = True
+        Pedina3.Visible = True
+        Pedina4.Visible = False
     End Sub
 End Class
