@@ -37,6 +37,8 @@ Partial Class Gioco
         Me.PersoL = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Giocatore2 = New System.Windows.Forms.PictureBox()
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.TurnoL = New System.Windows.Forms.Label()
         CType(Me.Giocatore1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.d2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,11 +153,11 @@ Partial Class Gioco
         Me.WinL.BackColor = System.Drawing.Color.White
         Me.WinL.Font = New System.Drawing.Font("Segoe UI", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.WinL.ForeColor = System.Drawing.Color.Lime
-        Me.WinL.Location = New System.Drawing.Point(346, 136)
+        Me.WinL.Location = New System.Drawing.Point(148, 135)
         Me.WinL.Name = "WinL"
-        Me.WinL.Size = New System.Drawing.Size(637, 159)
+        Me.WinL.Size = New System.Drawing.Size(764, 159)
         Me.WinL.TabIndex = 11
-        Me.WinL.Text = "Hai Vinto!"
+        Me.WinL.Text = "P1 Ha vinto!"
         Me.WinL.Visible = False
         '
         'RestartB
@@ -175,37 +177,51 @@ Partial Class Gioco
         Me.PersoL.AutoSize = True
         Me.PersoL.BackColor = System.Drawing.Color.White
         Me.PersoL.Font = New System.Drawing.Font("Segoe UI", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.PersoL.ForeColor = System.Drawing.Color.Red
-        Me.PersoL.Location = New System.Drawing.Point(346, 136)
+        Me.PersoL.ForeColor = System.Drawing.Color.Lime
+        Me.PersoL.Location = New System.Drawing.Point(148, 135)
         Me.PersoL.Name = "PersoL"
-        Me.PersoL.Size = New System.Drawing.Size(640, 159)
+        Me.PersoL.Size = New System.Drawing.Size(764, 159)
         Me.PersoL.TabIndex = 13
-        Me.PersoL.Text = "Hai Perso!"
+        Me.PersoL.Text = "P2 Ha vinto!"
         Me.PersoL.Visible = False
         '
         'Timer2
         '
-        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 150
         '
         'Giocatore2
         '
         Me.Giocatore2.BackColor = System.Drawing.Color.Transparent
         Me.Giocatore2.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.Gioc2
         Me.Giocatore2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Giocatore2.Location = New System.Drawing.Point(61, 732)
+        Me.Giocatore2.Location = New System.Drawing.Point(29, 732)
         Me.Giocatore2.Name = "Giocatore2"
         Me.Giocatore2.Size = New System.Drawing.Size(63, 61)
         Me.Giocatore2.TabIndex = 14
         Me.Giocatore2.TabStop = False
         '
+        'Timer3
+        '
+        Me.Timer3.Interval = 1
+        '
+        'TurnoL
+        '
+        Me.TurnoL.AutoSize = True
+        Me.TurnoL.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TurnoL.Location = New System.Drawing.Point(200, 294)
+        Me.TurnoL.Name = "TurnoL"
+        Me.TurnoL.Size = New System.Drawing.Size(210, 41)
+        Me.TurnoL.TabIndex = 15
+        Me.TurnoL.Text = "è il turno di P1"
+        '
         'Gioco
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Gioco_Oca.My.Resources.Resources.tabbella1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1380, 836)
+        Me.Controls.Add(Me.TurnoL)
         Me.Controls.Add(Me.Giocatore2)
         Me.Controls.Add(Me.PersoL)
         Me.Controls.Add(Me.RestartB)
@@ -248,4 +264,6 @@ Partial Class Gioco
     Friend WithEvents PersoL As Label
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Giocatore2 As PictureBox
+    Friend WithEvents Timer3 As Timer
+    Friend WithEvents TurnoL As Label
 End Class

@@ -4,6 +4,8 @@
     Dim dadoR As New Random
     Dim n As New Integer
 
+    Dim volte = 1
+
 
     Dim turno = 1
 
@@ -13,64 +15,10 @@
     Dim casella As New Integer
     Dim casella2 = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        d1.Visible = False
-        d2.Visible = False
-        d3.Visible = False
-        d4.Visible = False
-        d5.Visible = False
-        d6.Visible = False
 
-
-
-        dado = dadoR.Next(1, 7)
+        Timer2.Enabled = True
 
         My.Computer.Audio.Play(My.Resources.DadoS, AudioPlayMode.Background)
-
-        If dado = 1 Then
-            d1.Visible = True
-        ElseIf dado = 2 Then
-            d2.Visible = True
-        ElseIf dado = 3 Then
-            d3.Visible = True
-        ElseIf dado = 4 Then
-            d4.Visible = True
-        ElseIf dado = 5 Then
-            d5.Visible = True
-        ElseIf dado = 6 Then
-            d6.Visible = True
-        End If
-
-        If turno = 1 Then
-
-            casella += dado
-
-            If casella > 48 Then
-                n = casella - (dado * 2)
-                casella = n
-            End If
-
-            turno = 2
-            dado = 0
-
-        ElseIf turno = 2 Then
-            casella2 += dado
-
-            If casella2 > 48 Then
-                n = casella2 - (dado * 2)
-                casella2 = n
-            End If
-
-            turno = 1
-            dado = 0
-        End If
-
-        dado = 0
-
-
-
-
-
-
 
     End Sub
 
@@ -83,6 +31,11 @@
             Perso()
         End If
 
+        If turno = 1 Then
+            TurnoL.Text = "è il turno di P1"
+        ElseIf turno = 2 Then
+            TurnoL.Text = "è il turno di P2"
+        End If
 
         If casella = 0 Then
                 Giocatore1.Location = cordCaselle(0)
@@ -414,5 +367,87 @@
         d6.Visible = False
     End Sub
 
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        d1.Visible = False
+        d2.Visible = False
+        d3.Visible = False
+        d4.Visible = False
+        d5.Visible = False
+        d6.Visible = False
 
+
+
+        If volte < 10 Then
+
+
+            dado = dadoR.Next(1, 7)
+
+            If dado = 1 Then
+                d1.Visible = True
+            ElseIf dado = 2 Then
+                d2.Visible = True
+            ElseIf dado = 3 Then
+                d3.Visible = True
+            ElseIf dado = 4 Then
+                d4.Visible = True
+            ElseIf dado = 5 Then
+                d5.Visible = True
+            ElseIf dado = 6 Then
+                d6.Visible = True
+            End If
+
+            volte += 1
+
+        Else
+            Timer3.Enabled = True
+            Timer2.Enabled = False
+
+            volte = 0
+        End If
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+
+
+
+        Timer3.Enabled = False
+
+        If dado = 1 Then
+            d1.Visible = True
+        ElseIf dado = 2 Then
+            d2.Visible = True
+        ElseIf dado = 3 Then
+            d3.Visible = True
+        ElseIf dado = 4 Then
+            d4.Visible = True
+        ElseIf dado = 5 Then
+            d5.Visible = True
+        ElseIf dado = 6 Then
+            d6.Visible = True
+        End If
+
+        If turno = 1 Then
+
+            casella += dado
+
+            If casella > 48 Then
+                n = casella - (dado * 2)
+                casella = n
+            End If
+
+            turno = 2
+            dado = 0
+
+        ElseIf turno = 2 Then
+            casella2 += dado
+
+            If casella2 > 48 Then
+                n = casella2 - (dado * 2)
+                casella2 = n
+            End If
+
+            turno = 1
+            dado = 0
+        End If
+    End Sub
 End Class
