@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Gioco
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class Gioco
     'NOTA: la procedura che segue è richiesta da Progettazione Windows Form
     'Può essere modificata in Progettazione Windows Form.  
     'Non modificarla mediante l'editor del codice.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Carta = New System.Windows.Forms.PictureBox()
         Me.NestrattoL = New System.Windows.Forms.Label()
         Me.NeL = New System.Windows.Forms.Label()
@@ -54,6 +55,7 @@ Partial Class Gioco
         Me.C26 = New System.Windows.Forms.Label()
         Me.C27 = New System.Windows.Forms.Label()
         Me.EstraiB = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Carta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -85,7 +87,7 @@ Partial Class Gioco
         Me.NeL.Name = "NeL"
         Me.NeL.Size = New System.Drawing.Size(838, 165)
         Me.NeL.TabIndex = 2
-        Me.NeL.Text = "10"
+        Me.NeL.Text = "__"
         Me.NeL.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'C1
@@ -377,6 +379,10 @@ Partial Class Gioco
         Me.EstraiB.Text = "Estrai Numero"
         Me.EstraiB.UseVisualStyleBackColor = True
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1
+        '
         'Gioco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -453,4 +459,5 @@ Partial Class Gioco
     Friend WithEvents C26 As Label
     Friend WithEvents C27 As Label
     Friend WithEvents EstraiB As Button
+    Friend WithEvents Timer1 As Timer
 End Class
