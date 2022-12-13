@@ -6,8 +6,19 @@
     Dim NumeriCasella(27) As Integer
 
     Dim Riga1Bool(9) As Boolean
+    Dim riga1Int As Integer
     Dim Riga2Bool(9) As Boolean
+    Dim riga2Int As Integer
     Dim Riga3Bool(9) As Boolean
+    Dim riga3Int As Integer
+
+    Dim ambo As Boolean = False
+    Dim terzina As Boolean = False
+    Dim quartina As Boolean = False
+    Dim cinquina As Boolean = False
+    Dim tombola As Boolean = False
+
+    Dim win As Boolean = False
 
     Dim a As Integer
     Dim volteArray As Integer = 0
@@ -27,6 +38,7 @@
 
         Timer1.Enabled = True
 
+        My.Computer.Audio.Play(My.Resources.EstrazioneS, AudioPlayMode.Background)
 
     End Sub
 
@@ -35,9 +47,9 @@
     Private Sub Gioco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For i As Integer = 1 To 27
 
-            b = rC.Next(1, 3)
+            b = rC.Next(1, 4)
 
-            If b = 1 Then
+            If b < 3 Then
 
                 a = NumeroEstratto2()
 
@@ -47,7 +59,7 @@
 
                 a = 0
 
-            ElseIf b = 2 Then
+            ElseIf b = 3 Then
 
                 volteArray += 1
 
@@ -84,6 +96,9 @@
         C25.Text = NumeriCasella(24)
         C26.Text = NumeriCasella(25)
         C27.Text = NumeriCasella(26)
+
+        My.Computer.Audio.Play(My.Resources.BS, AudioPlayMode.Background)
+
     End Sub
 
     Private Function NumeroEstratto() As Integer
@@ -135,86 +150,162 @@
         If z = NumeriCasella(0) Then
             C1.BackColor = Color.Cyan
             Riga1Bool(0) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(1) Then
             C2.BackColor = Color.Cyan
             Riga1Bool(1) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(2) Then
             C3.BackColor = Color.Cyan
             Riga1Bool(2) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(3) Then
             C4.BackColor = Color.Cyan
             Riga1Bool(3) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(4) Then
             C5.BackColor = Color.Cyan
             Riga1Bool(4) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(5) Then
             C6.BackColor = Color.Cyan
             Riga1Bool(5) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(6) Then
             C7.BackColor = Color.Cyan
             Riga1Bool(6) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(7) Then
             C8.BackColor = Color.Cyan
             Riga1Bool(7) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(8) Then
             C9.BackColor = Color.Cyan
             Riga1Bool(8) = True
+            riga1Int += 1
         ElseIf z = NumeriCasella(9) Then
             C10.BackColor = Color.Cyan
             Riga2Bool(0) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(10) Then
             C11.BackColor = Color.Cyan
             Riga2Bool(1) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(11) Then
             C12.BackColor = Color.Cyan
             Riga2Bool(2) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(12) Then
             C13.BackColor = Color.Cyan
             Riga2Bool(3) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(13) Then
             C14.BackColor = Color.Cyan
             Riga2Bool(4) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(14) Then
             C15.BackColor = Color.Cyan
             Riga2Bool(5) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(15) Then
             C16.BackColor = Color.Cyan
             Riga2Bool(6) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(16) Then
             C17.BackColor = Color.Cyan
             Riga2Bool(7) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(17) Then
             C18.BackColor = Color.Cyan
             Riga2Bool(8) = True
+            riga2Int += 1
         ElseIf z = NumeriCasella(18) Then
             C19.BackColor = Color.Cyan
             Riga3Bool(0) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(19) Then
             C20.BackColor = Color.Cyan
             Riga3Bool(1) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(20) Then
             C21.BackColor = Color.Cyan
             Riga3Bool(2) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(21) Then
             C22.BackColor = Color.Cyan
             Riga3Bool(3) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(22) Then
             C23.BackColor = Color.Cyan
             Riga3Bool(4) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(23) Then
             C24.BackColor = Color.Cyan
             Riga3Bool(5) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(24) Then
             C25.BackColor = Color.Cyan
             Riga3Bool(6) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(25) Then
             C26.BackColor = Color.Cyan
             Riga3Bool(7) = True
+            riga3Int += 1
         ElseIf z = NumeriCasella(26) Then
             C27.BackColor = Color.Cyan
             Riga3Bool(8) = True
+            riga3Int += 1
         End If
 
+
+
+
+        If riga1Int > 1 Or riga2Int > 1 Or riga3Int > 1 Then
+            ambo = True
+        End If
+
+        If riga1Int > 2 Or riga2Int > 2 Or riga3Int > 2 Then
+            terzina = True
+        End If
+
+        If riga1Int > 3 Or riga2Int > 3 Or riga3Int > 3 Then
+            quartina = True
+        End If
+
+        If riga1Int > 4 Or riga2Int > 4 Or riga3Int > 4 Then
+            cinquina = True
+        End If
+
+        If ambo = True Then
+            AmboL.Image = My.Resources.xRossa
+        End If
+
+        If terzina = True Then
+            TerzinaL.Image = My.Resources.xRossa
+        End If
+
+        If quartina = True Then
+            QuartinaL.Image = My.Resources.xRossa
+        End If
+
+        If cinquina = True Then
+            CinquinaL.Image = My.Resources.xRossa
+            win = True
+        End If
+
+        If win = True Then
+            WinL.Visible = True
+            RicominciaB.Visible = True
+
+            EstraiB.Enabled = False
+        End If
+
+
         Timer1.Enabled = False
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles RicominciaB.Click
+        End
     End Sub
 End Class

@@ -63,6 +63,25 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property BGjpg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BGjpg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property BS() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("BS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Cartelle_Tombola() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Cartelle-Tombola", resourceCulture)
@@ -81,11 +100,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property EstrazioneS() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("EstrazioneS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property super_tombola() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("super_tombola", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property xRossa() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xRossa", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
