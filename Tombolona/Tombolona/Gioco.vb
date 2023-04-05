@@ -45,29 +45,7 @@
 
 
     Private Sub Gioco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        For i As Integer = 1 To 27
-
-            b = rC.Next(1, 4)
-
-            If b < 3 Then
-
-                a = NumeroEstratto2()
-
-                NumeriCasella(volteArray) = a
-
-                volteArray += 1
-
-                a = 0
-
-            ElseIf b = 3 Then
-
-                volteArray += 1
-
-                NumeriCasella(volteArray) = Nothing
-
-            End If
-
-        Next
+        GenerazioneCaselle()
 
         C1.Text = NumeriCasella(0)
         C2.Text = NumeriCasella(1)
@@ -96,6 +74,114 @@
         C25.Text = NumeriCasella(24)
         C26.Text = NumeriCasella(25)
         C27.Text = NumeriCasella(26)
+
+        If NumeriCasella(0) = 0 Then
+            C1.Text = ""
+        End If
+
+        If NumeriCasella(1) = 0 Then
+            C2.Text = ""
+        End If
+
+        If NumeriCasella(2) = 0 Then
+            C3.Text = ""
+        End If
+
+        If NumeriCasella(3) = 0 Then
+            C4.Text = ""
+        End If
+
+        If NumeriCasella(4) = 0 Then
+            C5.Text = ""
+        End If
+
+        If NumeriCasella(5) = 0 Then
+            C6.Text = ""
+        End If
+
+        If NumeriCasella(6) = 0 Then
+            C7.Text = ""
+        End If
+
+        If NumeriCasella(7) = 0 Then
+            C8.Text = ""
+        End If
+
+        If NumeriCasella(8) = 0 Then
+            C9.Text = ""
+        End If
+
+        If NumeriCasella(9) = 0 Then
+            C10.Text = ""
+        End If
+
+        If NumeriCasella(10) = 0 Then
+            C11.Text = ""
+        End If
+
+        If NumeriCasella(11) = 0 Then
+            C12.Text = ""
+        End If
+
+        If NumeriCasella(12) = 0 Then
+            C13.Text = ""
+        End If
+
+        If NumeriCasella(13) = 0 Then
+            C14.Text = ""
+        End If
+
+        If NumeriCasella(14) = 0 Then
+            C15.Text = ""
+        End If
+
+        If NumeriCasella(15) = 0 Then
+            C16.Text = ""
+        End If
+
+        If NumeriCasella(16) = 0 Then
+            C17.Text = ""
+        End If
+
+        If NumeriCasella(17) = 0 Then
+            C18.Text = ""
+        End If
+
+        If NumeriCasella(18) = 0 Then
+            C19.Text = ""
+        End If
+
+        If NumeriCasella(19) = 0 Then
+            C20.Text = ""
+        End If
+
+        If NumeriCasella(20) = 0 Then
+            C21.Text = ""
+        End If
+
+        If NumeriCasella(21) = 0 Then
+            C22.Text = ""
+        End If
+
+        If NumeriCasella(22) = 0 Then
+            C23.Text = ""
+        End If
+
+        If NumeriCasella(23) = 0 Then
+            C24.Text = ""
+        End If
+
+        If NumeriCasella(24) = 0 Then
+            C25.Text = ""
+        End If
+
+        If NumeriCasella(25) = 0 Then
+            C26.Text = ""
+        End If
+
+        If NumeriCasella(26) = 0 Then
+            C27.Text = ""
+        End If
 
         My.Computer.Audio.Play(My.Resources.BS, AudioPlayMode.Background)
 
@@ -305,7 +391,29 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles RicominciaB.Click
-        End
+    Private Sub GenerazioneCaselle()
+        For i As Integer = 1 To 27
+
+            b = rC.Next(1, 4)
+
+            If b < 3 Then
+
+                a = NumeroEstratto2()
+
+                NumeriCasella(volteArray) = a
+
+                volteArray += 1
+
+                a = 0
+
+            ElseIf b = 3 Then
+
+                volteArray += 1
+
+                NumeriCasella(volteArray) = Nothing
+
+            End If
+
+        Next
     End Sub
 End Class
