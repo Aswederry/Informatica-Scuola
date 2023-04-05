@@ -1,0 +1,1 @@
+Se devo copiare l'intero progetto ma vuoi cambiare le immagini basta che vai su: Variabili-> dim image() as Image = {My.resources."Il nome dell'immagine nelle risorse", ripeti} e funzionera come normale, ricorda che la prima immagine è la parte didietro della carta. altri aggiustamenti sono nelle tue mani ma basta che non cambi il nome agli elementi del form e il codice.
