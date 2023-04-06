@@ -1,7 +1,6 @@
-﻿Public Class Gioco
+﻿Public Class Gioco 'Dove non metto commenti è dove non c'è niente da cambiare
 #Region "Variabili"
-    Dim image() As Image = {My.Resources.Back, My.Resources.Cloth, My.Resources.Granite, My.Resources.Grass, My.Resources.Lava, My.Resources.Legno, My.Resources.Navicella, My.Resources.Paint, My.Resources.Roccia, My.Resources.Titanium, My.Resources.Zolfo}
-
+    Dim image() As Image = {My.Resources.Back, My.Resources.Cloth, My.Resources.Granite, My.Resources.Grass, My.Resources.Lava, My.Resources.Legno, My.Resources.Navicella, My.Resources.Paint, My.Resources.Roccia, My.Resources.Titanium, My.Resources.Zolfo} 'Basta cambiare My.Resources è mettere il nome delle immagini, Il primo è sempre il didietro della carta.
 
     Dim checks(10) As Integer
 
@@ -13,7 +12,7 @@
     Dim counter As Short = 0
 
     Dim score As Short = 0
-    Dim moves As Short = 20
+    Dim moves As Short = 20 'Mosse consentite.
 
     Dim yesCard As Boolean = False
 #End Region
@@ -36,6 +35,8 @@
 
             pick(0).Visible = False
             pick(1).Visible = False
+
+            AudioPlayer(4)
         Else
             pick(0).BackgroundImage = image(0)
             pick(1).BackgroundImage = image(0)
@@ -59,13 +60,15 @@
     Private Sub ConditionCheck()
         If score = 10 Then
             WinTxt.Visible = True
+            AudioPlayer(2)
         End If
 
-        If moves <= 0 Then
+        If moves < 0 Then 'Se vuoi cambiare il testo di quando perdi lo puoì fare da qua.
             WinTxt.Text = "Hai perso!"
             WinTxt.ForeColor = Color.Red
             WinTxt.Visible = True
             StopInput(True)
+            AudioPlayer(3)
         End If
     End Sub
 #End Region
@@ -113,6 +116,8 @@
             Compare(pick(0), pick(1))
         End If
 
+        AudioPlayer(1)
+
         Return x
     End Function
 
@@ -127,6 +132,22 @@
             For i = 1 To 20
                 cards(i - 1).Enabled = True
             Next
+        End If
+
+        Return x
+    End Function
+
+    Public Function AudioPlayer(x As Short) As Short 'Basta Cambiare My.Resources per cambiare audio
+        If x = 1 Then
+            My.Computer.Audio.Play(My.Resources.FlipS, AudioPlayMode.Background) 'Quando si cliccano le carte.
+        ElseIf x = 2 Then
+            My.Computer.Audio.Play(My.Resources.WinS, AudioPlayMode.Background) 'Quando si vince
+        ElseIf x = 3 Then
+            My.Computer.Audio.Play(My.Resources.LoseS, AudioPlayMode.Background) 'Quando si perde
+        ElseIf x = 4 Then
+            My.Computer.Audio.Play(My.Resources.PointsS, AudioPlayMode.Background) 'Quando si ottiene un punto
+        ElseIf x = 5 Then
+            My.Computer.Audio.Play(My.Resources.ClickS, AudioPlayMode.Background) 'Quando si clicca un button nei menù
         End If
 
         Return x

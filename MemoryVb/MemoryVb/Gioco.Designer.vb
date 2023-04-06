@@ -352,11 +352,12 @@ Partial Class Gioco
         MovesTxt.AutoSize = True
         MovesTxt.Font = New Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point)
         MovesTxt.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
-        MovesTxt.Location = New Point(1065, 357)
+        MovesTxt.Location = New Point(1038, 354)
         MovesTxt.Name = "MovesTxt"
         MovesTxt.Size = New Size(137, 106)
         MovesTxt.TabIndex = 25
         MovesTxt.Text = "20"
+        MovesTxt.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Gioco
         ' 

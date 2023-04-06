@@ -121,6 +121,9 @@
   <data name="Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ClickS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClickS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Cloth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,17 +142,26 @@
   <data name="Legno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Legno.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoseS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoseS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Navicella" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Navicella.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Paint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paint.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PointsS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PointsS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Roccia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roccia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Titanium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Titanium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Zolfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zolfo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

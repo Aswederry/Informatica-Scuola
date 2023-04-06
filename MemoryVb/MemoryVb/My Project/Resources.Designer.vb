@@ -71,6 +71,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property ClickS() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("ClickS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Cloth() As System.Drawing.Bitmap
@@ -130,6 +139,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property LoseS() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("LoseS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Navicella() As System.Drawing.Bitmap
@@ -150,6 +168,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property PointsS() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("PointsS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Roccia() As System.Drawing.Bitmap
@@ -166,6 +193,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Titanium", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property WinS() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("WinS", resourceCulture)
             End Get
         End Property
         
