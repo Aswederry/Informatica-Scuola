@@ -9,8 +9,6 @@
 
     Dim random As New Random
 
-    Dim counter As Short = 0
-
     Dim score As Short = 0
     Dim moves As Short = 20 'Mosse consentite.
 
@@ -23,8 +21,7 @@
         Dim cards() As PictureBox = {C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20}
 
         For i = 1 To 20
-            CardProperties(cards(counter))
-            counter += 1
+            CardProperties(cards(i - 1))
         Next
 
     End Sub
@@ -33,24 +30,19 @@
         If yesCard = True Then
             score += 1
 
-            pick(0).Visible = False
-            pick(1).Visible = False
+            pick(0).Visible = False : pick(1).Visible = False
 
             AudioPlayer(4)
         Else
-            pick(0).BackgroundImage = image(0)
-            pick(1).BackgroundImage = image(0)
+            pick(0).BackgroundImage = image(0) : pick(1).BackgroundImage = image(0)
         End If
         moves -= 1
 
-        PunteggioTxt.Text = score
-        MovesTxt.Text = moves
+        PunteggioTxt.Text = score : MovesTxt.Text = moves
 
-        pick(0) = PlaceHolder1
-        pick(1) = PlaceHolder2
+        pick(0) = PlaceHolder1 : pick(1) = PlaceHolder2
 
-        StopInput(False)
-        ConditionCheck()
+        StopInput(False) : ConditionCheck()
 
         yesCard = False
 
@@ -63,12 +55,9 @@
             AudioPlayer(2)
         End If
 
-        If moves < 0 Then 'Se vuoi cambiare il testo di quando perdi lo puoì fare da qua.
-            WinTxt.Text = "Hai perso!"
-            WinTxt.ForeColor = Color.Red
-            WinTxt.Visible = True
-            StopInput(True)
-            AudioPlayer(3)
+        If moves <= 0 Then 'Se vuoi cambiare il testo di quando perdi lo puoì fare da qua.
+            WinTxt.Text = "Hai perso!" : WinTxt.ForeColor = Color.Red : WinTxt.Visible = True
+            StopInput(True) : AudioPlayer(3)
         End If
     End Sub
 #End Region
@@ -101,8 +90,7 @@
 
         StopInput(True)
 
-        Return x
-        Return y
+        Return x : Return y
     End Function
 
     Public Function Picker(x As PictureBox) As PictureBox
