@@ -25,6 +25,13 @@ Partial Class Form1
         StartButton = New Button()
         TitleTxt = New Label()
         RulesButton = New Button()
+        FacileBtn = New Button()
+        MedioBtn = New Button()
+        DiffBtn = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
+        Label4 = New Label()
         SuspendLayout()
         ' 
         ' StartButton
@@ -59,12 +66,97 @@ Partial Class Form1
         RulesButton.Text = "Regole"
         RulesButton.UseVisualStyleBackColor = True
         ' 
+        ' FacileBtn
+        ' 
+        FacileBtn.Font = New Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        FacileBtn.Location = New Point(5, 254)
+        FacileBtn.Name = "FacileBtn"
+        FacileBtn.Size = New Size(179, 83)
+        FacileBtn.TabIndex = 3
+        FacileBtn.Text = "Facile"
+        FacileBtn.UseVisualStyleBackColor = True
+        ' 
+        ' MedioBtn
+        ' 
+        MedioBtn.Enabled = False
+        MedioBtn.Font = New Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        MedioBtn.Location = New Point(187, 254)
+        MedioBtn.Name = "MedioBtn"
+        MedioBtn.Size = New Size(179, 83)
+        MedioBtn.TabIndex = 4
+        MedioBtn.Text = "Medio"
+        MedioBtn.UseVisualStyleBackColor = False
+        ' 
+        ' DiffBtn
+        ' 
+        DiffBtn.Font = New Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        DiffBtn.Location = New Point(368, 254)
+        DiffBtn.Name = "DiffBtn"
+        DiffBtn.Size = New Size(179, 83)
+        DiffBtn.TabIndex = 5
+        DiffBtn.Text = "Difficile"
+        DiffBtn.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.Gray
+        Label1.Location = New Point(171, 192)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(207, 54)
+        Label1.TabIndex = 6
+        Label1.Text = "Difficoltà"
+        ' 
+        ' Label2
+        ' 
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Gray
+        Label2.Location = New Point(12, 340)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(169, 38)
+        Label2.TabIndex = 7
+        Label2.Text = "Punti 0.5x"
+        Label2.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label3
+        ' 
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Gray
+        Label3.Location = New Point(187, 340)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(179, 38)
+        Label3.TabIndex = 8
+        Label3.Text = "Punti 1x"
+        Label3.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label4
+        ' 
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.Gray
+        Label4.Location = New Point(368, 340)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(179, 38)
+        Label4.TabIndex = 9
+        Label4.Text = "Punti 2x"
+        Label4.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
-        ClientSize = New Size(552, 210)
+        ClientSize = New Size(552, 383)
+        Controls.Add(Label4)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(DiffBtn)
+        Controls.Add(MedioBtn)
+        Controls.Add(FacileBtn)
         Controls.Add(RulesButton)
         Controls.Add(TitleTxt)
         Controls.Add(StartButton)
@@ -77,4 +169,11 @@ Partial Class Form1
     Friend WithEvents StartButton As Button
     Friend WithEvents TitleTxt As Label
     Friend WithEvents RulesButton As Button
+    Friend WithEvents FacileBtn As Button
+    Friend WithEvents MedioBtn As Button
+    Friend WithEvents DiffBtn As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

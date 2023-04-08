@@ -51,6 +51,10 @@ Partial Class Gioco
         WinTxt = New Label()
         MovesT = New Label()
         MovesTxt = New Label()
+        MenùButton = New Button()
+        FinalPTxt = New Label()
+        Label1 = New Label()
+        StreakTxt = New Label()
         CType(C1, ComponentModel.ISupportInitialize).BeginInit()
         CType(C2, ComponentModel.ISupportInitialize).BeginInit()
         CType(C3, ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +83,7 @@ Partial Class Gioco
         ' 
         C1.BackgroundImage = My.Resources.Resources.Back
         C1.BackgroundImageLayout = ImageLayout.Stretch
+        C1.Cursor = Cursors.Hand
         C1.Location = New Point(45, 12)
         C1.Name = "C1"
         C1.Size = New Size(150, 150)
@@ -89,6 +94,7 @@ Partial Class Gioco
         ' 
         C2.BackgroundImage = My.Resources.Resources.Back
         C2.BackgroundImageLayout = ImageLayout.Stretch
+        C2.Cursor = Cursors.Hand
         C2.Location = New Point(245, 12)
         C2.Name = "C2"
         C2.Size = New Size(150, 150)
@@ -99,6 +105,7 @@ Partial Class Gioco
         ' 
         C3.BackgroundImage = My.Resources.Resources.Back
         C3.BackgroundImageLayout = ImageLayout.Stretch
+        C3.Cursor = Cursors.Hand
         C3.Location = New Point(445, 12)
         C3.Name = "C3"
         C3.Size = New Size(150, 150)
@@ -109,6 +116,7 @@ Partial Class Gioco
         ' 
         C4.BackgroundImage = My.Resources.Resources.Back
         C4.BackgroundImageLayout = ImageLayout.Stretch
+        C4.Cursor = Cursors.Hand
         C4.Location = New Point(645, 12)
         C4.Name = "C4"
         C4.Size = New Size(150, 150)
@@ -119,6 +127,7 @@ Partial Class Gioco
         ' 
         C5.BackgroundImage = My.Resources.Resources.Back
         C5.BackgroundImageLayout = ImageLayout.Stretch
+        C5.Cursor = Cursors.Hand
         C5.Location = New Point(845, 12)
         C5.Name = "C5"
         C5.Size = New Size(150, 150)
@@ -129,6 +138,7 @@ Partial Class Gioco
         ' 
         C10.BackgroundImage = My.Resources.Resources.Back
         C10.BackgroundImageLayout = ImageLayout.Stretch
+        C10.Cursor = Cursors.Hand
         C10.Location = New Point(845, 173)
         C10.Name = "C10"
         C10.Size = New Size(150, 150)
@@ -139,6 +149,7 @@ Partial Class Gioco
         ' 
         C9.BackgroundImage = My.Resources.Resources.Back
         C9.BackgroundImageLayout = ImageLayout.Stretch
+        C9.Cursor = Cursors.Hand
         C9.Location = New Point(645, 173)
         C9.Name = "C9"
         C9.Size = New Size(150, 150)
@@ -149,6 +160,7 @@ Partial Class Gioco
         ' 
         C8.BackgroundImage = My.Resources.Resources.Back
         C8.BackgroundImageLayout = ImageLayout.Stretch
+        C8.Cursor = Cursors.Hand
         C8.Location = New Point(445, 173)
         C8.Name = "C8"
         C8.Size = New Size(150, 150)
@@ -159,6 +171,7 @@ Partial Class Gioco
         ' 
         C7.BackgroundImage = My.Resources.Resources.Back
         C7.BackgroundImageLayout = ImageLayout.Stretch
+        C7.Cursor = Cursors.Hand
         C7.Location = New Point(245, 173)
         C7.Name = "C7"
         C7.Size = New Size(150, 150)
@@ -169,6 +182,7 @@ Partial Class Gioco
         ' 
         C6.BackgroundImage = My.Resources.Resources.Back
         C6.BackgroundImageLayout = ImageLayout.Stretch
+        C6.Cursor = Cursors.Hand
         C6.Location = New Point(45, 173)
         C6.Name = "C6"
         C6.Size = New Size(150, 150)
@@ -179,6 +193,7 @@ Partial Class Gioco
         ' 
         C15.BackgroundImage = My.Resources.Resources.Back
         C15.BackgroundImageLayout = ImageLayout.Stretch
+        C15.Cursor = Cursors.Hand
         C15.Location = New Point(845, 334)
         C15.Name = "C15"
         C15.Size = New Size(150, 150)
@@ -189,6 +204,7 @@ Partial Class Gioco
         ' 
         C14.BackgroundImage = My.Resources.Resources.Back
         C14.BackgroundImageLayout = ImageLayout.Stretch
+        C14.Cursor = Cursors.Hand
         C14.Location = New Point(645, 334)
         C14.Name = "C14"
         C14.Size = New Size(150, 150)
@@ -199,6 +215,7 @@ Partial Class Gioco
         ' 
         C13.BackgroundImage = My.Resources.Resources.Back
         C13.BackgroundImageLayout = ImageLayout.Stretch
+        C13.Cursor = Cursors.Hand
         C13.Location = New Point(445, 334)
         C13.Name = "C13"
         C13.Size = New Size(150, 150)
@@ -209,6 +226,7 @@ Partial Class Gioco
         ' 
         C12.BackgroundImage = My.Resources.Resources.Back
         C12.BackgroundImageLayout = ImageLayout.Stretch
+        C12.Cursor = Cursors.Hand
         C12.Location = New Point(245, 334)
         C12.Name = "C12"
         C12.Size = New Size(150, 150)
@@ -219,6 +237,7 @@ Partial Class Gioco
         ' 
         C11.BackgroundImage = My.Resources.Resources.Back
         C11.BackgroundImageLayout = ImageLayout.Stretch
+        C11.Cursor = Cursors.Hand
         C11.Location = New Point(45, 334)
         C11.Name = "C11"
         C11.Size = New Size(150, 150)
@@ -229,6 +248,7 @@ Partial Class Gioco
         ' 
         C20.BackgroundImage = My.Resources.Resources.Back
         C20.BackgroundImageLayout = ImageLayout.Stretch
+        C20.Cursor = Cursors.Hand
         C20.Location = New Point(845, 495)
         C20.Name = "C20"
         C20.Size = New Size(150, 150)
@@ -239,6 +259,7 @@ Partial Class Gioco
         ' 
         C19.BackgroundImage = My.Resources.Resources.Back
         C19.BackgroundImageLayout = ImageLayout.Stretch
+        C19.Cursor = Cursors.Hand
         C19.Location = New Point(645, 495)
         C19.Name = "C19"
         C19.Size = New Size(150, 150)
@@ -249,6 +270,7 @@ Partial Class Gioco
         ' 
         C18.BackgroundImage = My.Resources.Resources.Back
         C18.BackgroundImageLayout = ImageLayout.Stretch
+        C18.Cursor = Cursors.Hand
         C18.Location = New Point(445, 495)
         C18.Name = "C18"
         C18.Size = New Size(150, 150)
@@ -259,6 +281,7 @@ Partial Class Gioco
         ' 
         C17.BackgroundImage = My.Resources.Resources.Back
         C17.BackgroundImageLayout = ImageLayout.Stretch
+        C17.Cursor = Cursors.Hand
         C17.Location = New Point(245, 495)
         C17.Name = "C17"
         C17.Size = New Size(150, 150)
@@ -269,6 +292,7 @@ Partial Class Gioco
         ' 
         C16.BackgroundImage = My.Resources.Resources.Back
         C16.BackgroundImageLayout = ImageLayout.Stretch
+        C16.Cursor = Cursors.Hand
         C16.Location = New Point(45, 495)
         C16.Name = "C16"
         C16.Size = New Size(150, 150)
@@ -306,7 +330,7 @@ Partial Class Gioco
         PunteggioTxt.AutoSize = True
         PunteggioTxt.Font = New Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point)
         PunteggioTxt.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
-        PunteggioTxt.Location = New Point(1065, 100)
+        PunteggioTxt.Location = New Point(1065, 83)
         PunteggioTxt.Name = "PunteggioTxt"
         PunteggioTxt.Size = New Size(91, 106)
         PunteggioTxt.TabIndex = 22
@@ -329,7 +353,7 @@ Partial Class Gioco
         WinTxt.BackColor = Color.Transparent
         WinTxt.Font = New Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point)
         WinTxt.ForeColor = Color.Lime
-        WinTxt.Location = New Point(201, 232)
+        WinTxt.Location = New Point(201, 164)
         WinTxt.Name = "WinTxt"
         WinTxt.Size = New Size(637, 159)
         WinTxt.TabIndex = 24
@@ -341,7 +365,7 @@ Partial Class Gioco
         MovesT.AutoSize = True
         MovesT.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point)
         MovesT.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
-        MovesT.Location = New Point(1032, 269)
+        MovesT.Location = New Point(1036, 445)
         MovesT.Name = "MovesT"
         MovesT.Size = New Size(143, 54)
         MovesT.TabIndex = 26
@@ -349,15 +373,58 @@ Partial Class Gioco
         ' 
         ' MovesTxt
         ' 
-        MovesTxt.AutoSize = True
         MovesTxt.Font = New Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point)
         MovesTxt.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
-        MovesTxt.Location = New Point(1038, 354)
+        MovesTxt.Location = New Point(1042, 515)
         MovesTxt.Name = "MovesTxt"
         MovesTxt.Size = New Size(137, 106)
         MovesTxt.TabIndex = 25
         MovesTxt.Text = "20"
         MovesTxt.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' MenùButton
+        ' 
+        MenùButton.Font = New Font("Segoe UI Semibold", 28.2F, FontStyle.Bold, GraphicsUnit.Point)
+        MenùButton.Location = New Point(310, 445)
+        MenùButton.Name = "MenùButton"
+        MenùButton.Size = New Size(409, 83)
+        MenùButton.TabIndex = 27
+        MenùButton.Text = "Menù Principale"
+        MenùButton.UseVisualStyleBackColor = True
+        MenùButton.Visible = False
+        ' 
+        ' FinalPTxt
+        ' 
+        FinalPTxt.Font = New Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point)
+        FinalPTxt.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
+        FinalPTxt.Location = New Point(261, 354)
+        FinalPTxt.Name = "FinalPTxt"
+        FinalPTxt.Size = New Size(525, 62)
+        FinalPTxt.TabIndex = 28
+        FinalPTxt.Text = "Punteggio Finale : " & vbCrLf & vbCrLf & vbCrLf & vbCrLf & vbCrLf & vbCrLf
+        FinalPTxt.Visible = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
+        Label1.Location = New Point(1036, 249)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(142, 54)
+        Label1.TabIndex = 30
+        Label1.Text = "Streak"
+        ' 
+        ' StreakTxt
+        ' 
+        StreakTxt.AutoSize = True
+        StreakTxt.Font = New Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point)
+        StreakTxt.ForeColor = Color.FromArgb(CByte(113), CByte(113), CByte(113))
+        StreakTxt.Location = New Point(1065, 310)
+        StreakTxt.Name = "StreakTxt"
+        StreakTxt.Size = New Size(91, 106)
+        StreakTxt.TabIndex = 29
+        StreakTxt.Text = "0"
         ' 
         ' Gioco
         ' 
@@ -365,6 +432,10 @@ Partial Class Gioco
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
         ClientSize = New Size(1218, 662)
+        Controls.Add(Label1)
+        Controls.Add(StreakTxt)
+        Controls.Add(FinalPTxt)
+        Controls.Add(MenùButton)
         Controls.Add(WinTxt)
         Controls.Add(MovesT)
         Controls.Add(MovesTxt)
@@ -448,4 +519,8 @@ Partial Class Gioco
     Friend WithEvents WinTxt As Label
     Friend WithEvents MovesT As Label
     Friend WithEvents MovesTxt As Label
+    Friend WithEvents MenùButton As Button
+    Friend WithEvents FinalPTxt As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents StreakTxt As Label
 End Class

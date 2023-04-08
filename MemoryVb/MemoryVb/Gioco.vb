@@ -2,15 +2,15 @@
 #Region "Variabili"
     Dim image() As Image = {My.Resources.Back, My.Resources.Cloth, My.Resources.Granite, My.Resources.Grass, My.Resources.Lava, My.Resources.Legno, My.Resources.Navicella, My.Resources.Paint, My.Resources.Roccia, My.Resources.Titanium, My.Resources.Zolfo} 'Basta cambiare My.Resources è mettere il nome delle immagini, Il primo è sempre il didietro della carta.
 
-    Dim checks(10) As Integer
+    Dim checks(10) As Integer : Dim leftcards As Integer
 
     Dim pick() As PictureBox = {PlaceHolder1, PlaceHolder2}
     Dim picked As Boolean = False
 
     Dim random As New Random
 
-    Dim score As Short = 0
-    Dim moves As Short = 20 'Mosse consentite.
+    Dim score As Double = 0 : Dim multiplier As Short = 1
+    Public moves As Short = 20 : Public difficulty = 2
 
     Dim yesCard As Boolean = False
 #End Region
@@ -24,21 +24,22 @@
             CardProperties(cards(i - 1))
         Next
 
+        MovesTxt.Text = moves
     End Sub
 
     Private Sub Hint_Tick(sender As Object, e As EventArgs) Handles Hint.Tick
         If yesCard = True Then
-            score += 1
+            score += multiplier : multiplier += 1 : leftcards += 1
 
             pick(0).Visible = False : pick(1).Visible = False
 
             AudioPlayer(4)
         Else
-            pick(0).BackgroundImage = image(0) : pick(1).BackgroundImage = image(0)
+            pick(0).BackgroundImage = image(0) : pick(1).BackgroundImage = image(0) : pick(0).Enabled = True : multiplier = 1
         End If
         moves -= 1
 
-        PunteggioTxt.Text = score : MovesTxt.Text = moves
+        PunteggioTxt.Text = score : MovesTxt.Text = moves : StreakTxt.Text = multiplier - 1
 
         pick(0) = PlaceHolder1 : pick(1) = PlaceHolder2
 
@@ -50,14 +51,23 @@
     End Sub
 
     Private Sub ConditionCheck()
-        If score = 10 Then
+        If leftcards = 10 Then
             WinTxt.Visible = True
             AudioPlayer(2)
+
+            If difficulty = 1 Then
+                score /= 2
+            ElseIf difficulty = 3 Then
+                score *= 2
+            End If
+
+            MenùButton.Visible = True : FinalPTxt.Visible = True : FinalPTxt.Text = "Punteggio Finale : " + Convert.ToString(score)
         End If
 
         If moves <= 0 Then 'Se vuoi cambiare il testo di quando perdi lo puoì fare da qua.
             WinTxt.Text = "Hai perso!" : WinTxt.ForeColor = Color.Red : WinTxt.Visible = True
             StopInput(True) : AudioPlayer(3)
+            MenùButton.Visible = True
         End If
     End Sub
 #End Region
@@ -96,7 +106,7 @@
     Public Function Picker(x As PictureBox) As PictureBox
         If picked = False Then
             pick(0) = x
-            picked = True
+            picked = True : pick(0).Enabled = False
         Else
             pick(1) = x
             picked = False
@@ -140,111 +150,92 @@
 
         Return x
     End Function
-
 #End Region
 
 #Region "Clicks"
     Private Sub C1_Click(sender As Object, e As EventArgs) Handles C1.Click
-        C1.BackgroundImage = image(C1.Tag)
-        Picker(C1)
+        C1.BackgroundImage = image(C1.Tag) : Picker(C1)
     End Sub
 
     Private Sub C2_Click(sender As Object, e As EventArgs) Handles C2.Click
-        C2.BackgroundImage = image(C2.Tag)
-        Picker(C2)
+        C2.BackgroundImage = image(C2.Tag) : Picker(C2)
     End Sub
 
     Private Sub C3_Click(sender As Object, e As EventArgs) Handles C3.Click
-        C3.BackgroundImage = image(C3.Tag)
-        Picker(C3)
+        C3.BackgroundImage = image(C3.Tag) : Picker(C3)
     End Sub
 
     Private Sub C4_Click(sender As Object, e As EventArgs) Handles C4.Click
-        C4.BackgroundImage = image(C4.Tag)
-        Picker(C4)
+        C4.BackgroundImage = image(C4.Tag) : Picker(C4)
     End Sub
 
     Private Sub C5_Click(sender As Object, e As EventArgs) Handles C5.Click
-        C5.BackgroundImage = image(C5.Tag)
-        Picker(C5)
+        C5.BackgroundImage = image(C5.Tag) : Picker(C5)
     End Sub
 
     Private Sub C6_Click(sender As Object, e As EventArgs) Handles C6.Click
-        C6.BackgroundImage = image(C6.Tag)
-        Picker(C6)
+        C6.BackgroundImage = image(C6.Tag) : Picker(C6)
     End Sub
 
     Private Sub C7_Click(sender As Object, e As EventArgs) Handles C7.Click
-        C7.BackgroundImage = image(C7.Tag)
-        Picker(C7)
+        C7.BackgroundImage = image(C7.Tag) : Picker(C7)
     End Sub
 
     Private Sub C8_Click(sender As Object, e As EventArgs) Handles C8.Click
-        C8.BackgroundImage = image(C8.Tag)
-        Picker(C8)
+        C8.BackgroundImage = image(C8.Tag) : Picker(C8)
     End Sub
 
     Private Sub C9_Click(sender As Object, e As EventArgs) Handles C9.Click
-        C9.BackgroundImage = image(C9.Tag)
-        Picker(C9)
+        C9.BackgroundImage = image(C9.Tag) : Picker(C9)
     End Sub
 
     Private Sub C10_Click(sender As Object, e As EventArgs) Handles C10.Click
-        C10.BackgroundImage = image(C10.Tag)
-        Picker(C10)
+        C10.BackgroundImage = image(C10.Tag) : Picker(C10)
     End Sub
 
     Private Sub C11_Click(sender As Object, e As EventArgs) Handles C11.Click
-        C11.BackgroundImage = image(C11.Tag)
-        Picker(C11)
+        C11.BackgroundImage = image(C11.Tag) : Picker(C11)
     End Sub
 
     Private Sub C12_Click(sender As Object, e As EventArgs) Handles C12.Click
-        C12.BackgroundImage = image(C12.Tag)
-        Picker(C12)
+        C12.BackgroundImage = image(C12.Tag) : Picker(C12)
     End Sub
 
     Private Sub C13_Click(sender As Object, e As EventArgs) Handles C13.Click
-        C13.BackgroundImage = image(C13.Tag)
-        Picker(C13)
+        C13.BackgroundImage = image(C13.Tag) : Picker(C13)
     End Sub
 
     Private Sub C14_Click(sender As Object, e As EventArgs) Handles C14.Click
-        C14.BackgroundImage = image(C14.Tag)
-        Picker(C14)
+        C14.BackgroundImage = image(C14.Tag) : Picker(C14)
     End Sub
 
     Private Sub C15_Click(sender As Object, e As EventArgs) Handles C15.Click
-        C15.BackgroundImage = image(C15.Tag)
-        Picker(C15)
+        C15.BackgroundImage = image(C15.Tag) : Picker(C15)
     End Sub
 
     Private Sub C16_Click(sender As Object, e As EventArgs) Handles C16.Click
-        C16.BackgroundImage = image(C16.Tag)
-        Picker(C16)
+        C16.BackgroundImage = image(C16.Tag) : Picker(C16)
     End Sub
 
     Private Sub C17_Click(sender As Object, e As EventArgs) Handles C17.Click
-        C17.BackgroundImage = image(C17.Tag)
-        Picker(C17)
+        C17.BackgroundImage = image(C17.Tag) : Picker(C17)
     End Sub
 
     Private Sub C18_Click(sender As Object, e As EventArgs) Handles C18.Click
-        C18.BackgroundImage = image(C18.Tag)
-        Picker(C18)
+        C18.BackgroundImage = image(C18.Tag) : Picker(C18)
     End Sub
 
     Private Sub C19_Click(sender As Object, e As EventArgs) Handles C19.Click
-        C19.BackgroundImage = image(C19.Tag)
-        Picker(C19)
+        C19.BackgroundImage = image(C19.Tag) : Picker(C19)
     End Sub
 
     Private Sub C20_Click(sender As Object, e As EventArgs) Handles C20.Click
-        C20.BackgroundImage = image(C20.Tag)
-        Picker(C20)
+        C20.BackgroundImage = image(C20.Tag) : Picker(C20)
     End Sub
 
-
+    Private Sub MenùButton_Click(sender As Object, e As EventArgs) Handles MenùButton.Click
+        Me.Close() : Form1.Show() : AudioPlayer(5)
+    End Sub
 #End Region
 
 End Class
