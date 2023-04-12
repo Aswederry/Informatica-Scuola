@@ -55,6 +55,8 @@ Partial Class Gioco
         FinalPTxt = New Label()
         Label1 = New Label()
         StreakTxt = New Label()
+        Label = New Label()
+        Init = New Timer(components)
         CType(C1, ComponentModel.ISupportInitialize).BeginInit()
         CType(C2, ComponentModel.ISupportInitialize).BeginInit()
         CType(C3, ComponentModel.ISupportInitialize).BeginInit()
@@ -426,12 +428,26 @@ Partial Class Gioco
         StreakTxt.TabIndex = 29
         StreakTxt.Text = "0"
         ' 
+        ' Label
+        ' 
+        Label.Location = New Point(12, 655)
+        Label.Name = "Label"
+        Label.Size = New Size(10, 10)
+        Label.TabIndex = 31
+        Label.Text = "FattoDaGreco"
+        Label.Visible = False
+        ' 
+        ' Init
+        ' 
+        Init.Interval = 5000
+        ' 
         ' Gioco
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
         ClientSize = New Size(1218, 662)
+        Controls.Add(Label)
         Controls.Add(Label1)
         Controls.Add(StreakTxt)
         Controls.Add(FinalPTxt)
@@ -523,4 +539,6 @@ Partial Class Gioco
     Friend WithEvents FinalPTxt As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents StreakTxt As Label
+    Friend WithEvents Label As Label
+    Friend WithEvents Init As Timer
 End Class

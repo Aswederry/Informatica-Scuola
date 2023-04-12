@@ -1,4 +1,4 @@
-﻿Public Class Gioco 'Dove non metto commenti è dove non c'è niente da cambiare
+﻿Public Class Gioco
 #Region "Variabili"
     Dim image() As Image = {My.Resources.Back, My.Resources.Cloth, My.Resources.Granite, My.Resources.Grass, My.Resources.Lava, My.Resources.Legno, My.Resources.Navicella, My.Resources.Paint, My.Resources.Roccia, My.Resources.Titanium, My.Resources.Zolfo} 'Basta cambiare My.Resources è mettere il nome delle immagini, Il primo è sempre il didietro della carta.
 
@@ -23,7 +23,7 @@
         For i = 1 To 20
             CardProperties(cards(i - 1))
         Next
-
+        Inizialize()
         MovesTxt.Text = moves
     End Sub
 
@@ -64,11 +64,29 @@
             MenùButton.Visible = True : FinalPTxt.Visible = True : FinalPTxt.Text = "Punteggio Finale : " + Convert.ToString(score)
         End If
 
-        If moves <= 0 Then 'Se vuoi cambiare il testo di quando perdi lo puoì fare da qua.
+        If moves <= 0 Then
             WinTxt.Text = "Hai perso!" : WinTxt.ForeColor = Color.Red : WinTxt.Visible = True
             StopInput(True) : AudioPlayer(3)
             MenùButton.Visible = True
         End If
+    End Sub
+
+    Private Sub Inizialize()
+        Dim cards() As PictureBox = {C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20}
+
+        For i = 1 To 20
+            cards(i - 1).BackgroundImage = image(cards(i - 1).Tag)
+        Next
+
+        If difficulty = 1 Then
+            Init.Interval = 5000
+        ElseIf difficulty = 2 Then
+            Init.Interval = 3000
+        ElseIf difficulty = 3 Then
+            Init.Interval = 2000
+        End If
+        StopInput(True)
+        Init.Enabled = True
     End Sub
 #End Region
 
@@ -135,7 +153,7 @@
         Return x
     End Function
 
-    Public Function AudioPlayer(x As Short) As Short 'Basta Cambiare My.Resources per cambiare audio
+    Public Function AudioPlayer(x As Short) As Short
         If x = 1 Then
             My.Computer.Audio.Play(My.Resources.FlipS, AudioPlayMode.Background) 'Quando si cliccano le carte.
         ElseIf x = 2 Then
@@ -236,6 +254,15 @@
     Private Sub MenùButton_Click(sender As Object, e As EventArgs) Handles MenùButton.Click
         Me.Close() : Form1.Show() : AudioPlayer(5)
     End Sub
-#End Region
 
+    Private Sub Init_Tick(sender As Object, e As EventArgs) Handles Init.Tick
+        Dim cards() As PictureBox = {C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20}
+
+        For i = 1 To 20
+            cards(i - 1).BackgroundImage = image(0)
+        Next
+        Init.Enabled = False
+        StopInput(False)
+    End Sub
+#End Region
 End Class
