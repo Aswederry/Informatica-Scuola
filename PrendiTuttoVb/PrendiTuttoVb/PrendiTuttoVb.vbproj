@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="AsweLib">
       <HintPath>..\..\..\..\Coding\AsweLib\AsweLib\bin\Debug\net6.0\AsweLib.dll</HintPath>
     </Reference>

@@ -1,0 +1,4 @@
+﻿[*.vb]
+
+# BC42104: La variabile è stata usata prima dell'assegnazione di un valore
+dotnet_diagnostic.BC42104.severity = silent
