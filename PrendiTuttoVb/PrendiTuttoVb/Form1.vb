@@ -23,20 +23,24 @@
             Normalize(playerNormalize, playerDeck(i))
         Next
 
+        My.Computer.Audio.Play(My.Resources.Shuffle, AudioPlayMode.Background)
+
         Label1.Text = playerNormalize(0)
         Label2.Text = playerNormalize(1)
         Label3.Text = playerNormalize(2)
     End Sub
 
-    Public Function PickCard(x() As Short)
+#Region "Funzioni"
+
+    Public Function PickCard(deck() As Short)
         Dim a As New Random : Dim b As Integer
-        For i = 0 To x.Length - 1
+        For i = 0 To deck.Length - 1
 
             b = a.Next(1, 41)
-            If x(x.Length - 1) = -1 Then
+            If deck(deck.Length - 1) = -1 Then
 
-                If x(i) = -1 And mazzo(b) <> -1 Then
-                    x(i) = mazzo(b)
+                If deck(i) = -1 And mazzo(b) <> -1 Then
+                    deck(i) = mazzo(b)
                     mazzo(b) = -1
                     Exit For
                 ElseIf mazzo(b) = -1 Then
@@ -49,7 +53,7 @@
             End If
 
         Next
-        Return x
+        Return deck
     End Function
 
     Public Function Normalize(normalizedArray() As Short, number As Short)
@@ -85,7 +89,10 @@
 
             ElseIf deck Is aiDeck Then
 
-                If deck(i) = -1 Then
+                If deck(i) <> -1 Then
+                    aiUI(i).BackgroundImage = Images(0)
+                    aiUI(i).Visible = True
+                Else
                     aiUI(i).Visible = False
                 End If
 
@@ -105,6 +112,7 @@
 
     Public Function GiveCard(GiverDeck() As Short, number As Short)
         Dim i As Short = 0
+        Dim a As Short = 0
         Dim normalizeDeckHolder As Array
 
         If GiverDeck Is playerDeck Then
@@ -116,8 +124,29 @@
         Do
             If centerDeck(i) <> -1 Then
 
-                If normalizeDeckHolder(number) = centerNormalize(i) Then
-                    normalizeDeckHolder(number) = -1 : playerDeck(number) = -1
+                If normalizeDeckHolder(number) = 1 Then
+                    Dim assopresente = False
+                    For i = 0 To centerDeck.Length - 1
+                        If centerNormalize(i) = 1 Then
+                            centerDeck(i) = -1 : centerNormalize(i) = -1 : GiverDeck(number) = -1 : normalizeDeckHolder(number) = -1
+                            UI(GiverDeck) : UI(centerDeck)
+                            assopresente = True
+                            Exit For
+                            Exit Do
+                        End If
+                    Next
+
+                    If assopresente = False Then
+                        For i = 0 To centerDeck.Length - 1
+                            centerDeck(i) = -1 : centerNormalize(i) = -1
+                            GiverDeck(number) = -1 : normalizeDeckHolder(number) = -1
+                            Exit For
+                        Next
+
+                    End If
+
+                ElseIf normalizeDeckHolder(number) = centerNormalize(i) Then
+                    normalizeDeckHolder(number) = -1 : GiverDeck(number) = -1
                     centerDeck(i) = -1
                     UI(GiverDeck) : UI(centerDeck)
                     normalizeDeckHolder(i) = -1 : centerNormalize(i) = -1
@@ -125,22 +154,25 @@
                 End If
 
             Else
-
                 centerDeck(i) = GiverDeck(number)
                 GiverDeck(number) = -1
                 UI(centerDeck) : UI(GiverDeck)
                 Exit Do
-
             End If
             i += 1
 
         Loop
+        My.Computer.Audio.Play(My.Resources.GiveC, AudioPlayMode.Background)
         Return GiverDeck
     End Function
 
+#End Region
+
+#Region "Subs"
+
+
     Public Sub AI()
         Dim bestOption As Short = -1
-        Dim a As Short : Dim b As New Random
 
         For i = 0 To 2
             If aiNormalize(i) = centerNormalize(i) And aiNormalize(i) <> -1 Then
@@ -153,20 +185,23 @@
 
             For i = 0 To 2
 
-                a = b.Next(0, 2)
-
-                If bestOption <> -1 Then
-                    bestOption = a
+                If aiDeck(i) <> -1 Then
+                    bestOption = i
                     Exit For
                 End If
 
             Next
+
         End If
 
         GiveCard(aiDeck, bestOption)
 
         AITimer.Enabled = False
         turno = 0
+
+        If aiDeck(0) = -1 AndAlso aiDeck(1) = -1 AndAlso aiDeck(2) = -1 Then
+            Wait.Enabled = True
+        End If
     End Sub
 
     Private Sub AItimerHandler()
@@ -176,6 +211,24 @@
 
         AITimer.Interval = a
         AITimer.Enabled = True
+    End Sub
+
+    Private Sub NewTurn()
+        For i = 0 To 2
+            PickCard(aiDeck)
+            UI(aiDeck)
+            Normalize(aiNormalize, aiDeck(i))
+
+            PickCard(playerDeck)
+            UI(playerDeck)
+            Normalize(playerNormalize, playerDeck(i))
+        Next
+
+        My.Computer.Audio.Play(My.Resources.Shuffle, AudioPlayMode.Background)
+
+        Label1.Text = playerNormalize(0)
+        Label2.Text = playerNormalize(1)
+        Label3.Text = playerNormalize(2)
     End Sub
     Private Sub P1_Click(sender As Object, e As EventArgs) Handles P1.Click
         If playerDeck(0) <> -1 And turno = 0 Then
@@ -207,4 +260,11 @@
     Private Sub AITimer_Tick(sender As Object, e As EventArgs) Handles AITimer.Tick
         AI()
     End Sub
+
+    Private Sub Wait_Tick(sender As Object, e As EventArgs) Handles Wait.Tick
+        NewTurn()
+        Wait.Enabled = False
+    End Sub
+
+#End Region
 End Class

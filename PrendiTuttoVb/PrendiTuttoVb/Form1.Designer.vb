@@ -43,6 +43,7 @@ Partial Class Form1
         Label2 = New Label()
         Label3 = New Label()
         AITimer = New Timer(components)
+        Wait = New Timer(components)
         CType(C5, ComponentModel.ISupportInitialize).BeginInit()
         CType(C1, ComponentModel.ISupportInitialize).BeginInit()
         CType(C2, ComponentModel.ISupportInitialize).BeginInit()
@@ -283,10 +284,16 @@ Partial Class Form1
         ' AITimer
         ' 
         ' 
+        ' Wait
+        ' 
+        Wait.Interval = 1000
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = My.Resources.Resources.Bg
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(702, 673)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -349,4 +356,5 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents AITimer As Timer
+    Friend WithEvents Wait As Timer
 End Class

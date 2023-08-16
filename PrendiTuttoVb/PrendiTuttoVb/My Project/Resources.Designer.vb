@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Bg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Bg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Coppe1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Coppe1", resourceCulture)
@@ -291,6 +301,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property GiveC() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("GiveC", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Mazza1() As System.Drawing.Bitmap
@@ -377,6 +396,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Mazza9", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Shuffle() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Shuffle", resourceCulture)
             End Get
         End Property
         
