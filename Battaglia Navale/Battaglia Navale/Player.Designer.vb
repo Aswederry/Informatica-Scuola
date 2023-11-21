@@ -77,8 +77,10 @@ Partial Class Player
         ' 
         ' a1
         ' 
+        a1.BackColor = SystemColors.AppWorkspace
         a1.Cursor = Cursors.Hand
         a1.Location = New Point(12, 116)
+        a1.Margin = New Padding(2)
         a1.Name = "a1"
         a1.Size = New Size(145, 145)
         a1.TabIndex = 0
@@ -86,8 +88,10 @@ Partial Class Player
         ' 
         ' a2
         ' 
+        a2.BackColor = SystemColors.AppWorkspace
         a2.Cursor = Cursors.Hand
-        a2.Location = New Point(163, 116)
+        a2.Location = New Point(161, 116)
+        a2.Margin = New Padding(2)
         a2.Name = "a2"
         a2.Size = New Size(145, 145)
         a2.TabIndex = 1
@@ -95,8 +99,10 @@ Partial Class Player
         ' 
         ' a4
         ' 
+        a4.BackColor = SystemColors.AppWorkspace
         a4.Cursor = Cursors.Hand
-        a4.Location = New Point(465, 116)
+        a4.Location = New Point(459, 116)
+        a4.Margin = New Padding(2)
         a4.Name = "a4"
         a4.Size = New Size(145, 145)
         a4.TabIndex = 3
@@ -104,8 +110,10 @@ Partial Class Player
         ' 
         ' a3
         ' 
+        a3.BackColor = SystemColors.AppWorkspace
         a3.Cursor = Cursors.Hand
-        a3.Location = New Point(314, 116)
+        a3.Location = New Point(310, 116)
+        a3.Margin = New Padding(2)
         a3.Name = "a3"
         a3.Size = New Size(145, 145)
         a3.TabIndex = 2
@@ -113,8 +121,10 @@ Partial Class Player
         ' 
         ' a5
         ' 
+        a5.BackColor = SystemColors.AppWorkspace
         a5.Cursor = Cursors.Hand
-        a5.Location = New Point(616, 116)
+        a5.Location = New Point(608, 116)
+        a5.Margin = New Padding(2)
         a5.Name = "a5"
         a5.Size = New Size(145, 145)
         a5.TabIndex = 4
@@ -122,8 +132,10 @@ Partial Class Player
         ' 
         ' a25
         ' 
+        a25.BackColor = SystemColors.AppWorkspace
         a25.Cursor = Cursors.Hand
-        a25.Location = New Point(616, 720)
+        a25.Location = New Point(608, 712)
+        a25.Margin = New Padding(2)
         a25.Name = "a25"
         a25.Size = New Size(145, 145)
         a25.TabIndex = 9
@@ -131,8 +143,10 @@ Partial Class Player
         ' 
         ' a24
         ' 
+        a24.BackColor = SystemColors.AppWorkspace
         a24.Cursor = Cursors.Hand
-        a24.Location = New Point(465, 720)
+        a24.Location = New Point(459, 712)
+        a24.Margin = New Padding(2)
         a24.Name = "a24"
         a24.Size = New Size(145, 145)
         a24.TabIndex = 8
@@ -140,8 +154,10 @@ Partial Class Player
         ' 
         ' a23
         ' 
+        a23.BackColor = SystemColors.AppWorkspace
         a23.Cursor = Cursors.Hand
-        a23.Location = New Point(314, 720)
+        a23.Location = New Point(310, 712)
+        a23.Margin = New Padding(2)
         a23.Name = "a23"
         a23.Size = New Size(145, 145)
         a23.TabIndex = 7
@@ -149,8 +165,10 @@ Partial Class Player
         ' 
         ' a22
         ' 
+        a22.BackColor = SystemColors.AppWorkspace
         a22.Cursor = Cursors.Hand
-        a22.Location = New Point(163, 720)
+        a22.Location = New Point(161, 712)
+        a22.Margin = New Padding(2)
         a22.Name = "a22"
         a22.Size = New Size(145, 145)
         a22.TabIndex = 6
@@ -158,8 +176,10 @@ Partial Class Player
         ' 
         ' a21
         ' 
+        a21.BackColor = SystemColors.AppWorkspace
         a21.Cursor = Cursors.Hand
-        a21.Location = New Point(12, 720)
+        a21.Location = New Point(11, 712)
+        a21.Margin = New Padding(2)
         a21.Name = "a21"
         a21.Size = New Size(145, 145)
         a21.TabIndex = 5
@@ -167,8 +187,10 @@ Partial Class Player
         ' 
         ' a15
         ' 
+        a15.BackColor = SystemColors.AppWorkspace
         a15.Cursor = Cursors.Hand
-        a15.Location = New Point(616, 418)
+        a15.Location = New Point(608, 414)
+        a15.Margin = New Padding(2)
         a15.Name = "a15"
         a15.Size = New Size(145, 145)
         a15.TabIndex = 19
@@ -176,8 +198,10 @@ Partial Class Player
         ' 
         ' a14
         ' 
+        a14.BackColor = SystemColors.AppWorkspace
         a14.Cursor = Cursors.Hand
-        a14.Location = New Point(465, 418)
+        a14.Location = New Point(459, 414)
+        a14.Margin = New Padding(2)
         a14.Name = "a14"
         a14.Size = New Size(145, 145)
         a14.TabIndex = 18
@@ -185,8 +209,10 @@ Partial Class Player
         ' 
         ' a13
         ' 
+        a13.BackColor = SystemColors.AppWorkspace
         a13.Cursor = Cursors.Hand
-        a13.Location = New Point(314, 418)
+        a13.Location = New Point(310, 414)
+        a13.Margin = New Padding(2)
         a13.Name = "a13"
         a13.Size = New Size(145, 145)
         a13.TabIndex = 17
@@ -194,8 +220,10 @@ Partial Class Player
         ' 
         ' a12
         ' 
+        a12.BackColor = SystemColors.AppWorkspace
         a12.Cursor = Cursors.Hand
-        a12.Location = New Point(163, 418)
+        a12.Location = New Point(161, 414)
+        a12.Margin = New Padding(2)
         a12.Name = "a12"
         a12.Size = New Size(145, 145)
         a12.TabIndex = 16
@@ -203,8 +231,10 @@ Partial Class Player
         ' 
         ' a11
         ' 
+        a11.BackColor = SystemColors.AppWorkspace
         a11.Cursor = Cursors.Hand
-        a11.Location = New Point(12, 418)
+        a11.Location = New Point(12, 414)
+        a11.Margin = New Padding(2)
         a11.Name = "a11"
         a11.Size = New Size(145, 145)
         a11.TabIndex = 15
@@ -212,8 +242,10 @@ Partial Class Player
         ' 
         ' a10
         ' 
+        a10.BackColor = SystemColors.AppWorkspace
         a10.Cursor = Cursors.Hand
-        a10.Location = New Point(616, 267)
+        a10.Location = New Point(608, 265)
+        a10.Margin = New Padding(2)
         a10.Name = "a10"
         a10.Size = New Size(145, 145)
         a10.TabIndex = 14
@@ -221,8 +253,10 @@ Partial Class Player
         ' 
         ' a9
         ' 
+        a9.BackColor = SystemColors.AppWorkspace
         a9.Cursor = Cursors.Hand
-        a9.Location = New Point(465, 267)
+        a9.Location = New Point(459, 265)
+        a9.Margin = New Padding(2)
         a9.Name = "a9"
         a9.Size = New Size(145, 145)
         a9.TabIndex = 13
@@ -230,8 +264,10 @@ Partial Class Player
         ' 
         ' a8
         ' 
+        a8.BackColor = SystemColors.AppWorkspace
         a8.Cursor = Cursors.Hand
-        a8.Location = New Point(314, 267)
+        a8.Location = New Point(310, 265)
+        a8.Margin = New Padding(2)
         a8.Name = "a8"
         a8.Size = New Size(145, 145)
         a8.TabIndex = 12
@@ -239,8 +275,10 @@ Partial Class Player
         ' 
         ' a7
         ' 
+        a7.BackColor = SystemColors.AppWorkspace
         a7.Cursor = Cursors.Hand
-        a7.Location = New Point(163, 267)
+        a7.Location = New Point(161, 265)
+        a7.Margin = New Padding(2)
         a7.Name = "a7"
         a7.Size = New Size(145, 145)
         a7.TabIndex = 11
@@ -248,8 +286,10 @@ Partial Class Player
         ' 
         ' a6
         ' 
+        a6.BackColor = SystemColors.AppWorkspace
         a6.Cursor = Cursors.Hand
-        a6.Location = New Point(12, 267)
+        a6.Location = New Point(11, 265)
+        a6.Margin = New Padding(2)
         a6.Name = "a6"
         a6.Size = New Size(145, 145)
         a6.TabIndex = 10
@@ -257,8 +297,10 @@ Partial Class Player
         ' 
         ' a20
         ' 
+        a20.BackColor = SystemColors.AppWorkspace
         a20.Cursor = Cursors.Hand
-        a20.Location = New Point(616, 569)
+        a20.Location = New Point(608, 563)
+        a20.Margin = New Padding(2)
         a20.Name = "a20"
         a20.Size = New Size(145, 145)
         a20.TabIndex = 24
@@ -266,8 +308,10 @@ Partial Class Player
         ' 
         ' a19
         ' 
+        a19.BackColor = SystemColors.AppWorkspace
         a19.Cursor = Cursors.Hand
-        a19.Location = New Point(465, 569)
+        a19.Location = New Point(459, 563)
+        a19.Margin = New Padding(2)
         a19.Name = "a19"
         a19.Size = New Size(145, 145)
         a19.TabIndex = 23
@@ -275,8 +319,10 @@ Partial Class Player
         ' 
         ' a18
         ' 
+        a18.BackColor = SystemColors.AppWorkspace
         a18.Cursor = Cursors.Hand
-        a18.Location = New Point(314, 569)
+        a18.Location = New Point(310, 563)
+        a18.Margin = New Padding(2)
         a18.Name = "a18"
         a18.Size = New Size(145, 145)
         a18.TabIndex = 22
@@ -284,8 +330,10 @@ Partial Class Player
         ' 
         ' a17
         ' 
+        a17.BackColor = SystemColors.AppWorkspace
         a17.Cursor = Cursors.Hand
-        a17.Location = New Point(163, 569)
+        a17.Location = New Point(161, 563)
+        a17.Margin = New Padding(2)
         a17.Name = "a17"
         a17.Size = New Size(145, 145)
         a17.TabIndex = 21
@@ -293,8 +341,10 @@ Partial Class Player
         ' 
         ' a16
         ' 
+        a16.BackColor = SystemColors.AppWorkspace
         a16.Cursor = Cursors.Hand
-        a16.Location = New Point(12, 569)
+        a16.Location = New Point(12, 563)
+        a16.Margin = New Padding(2)
         a16.Name = "a16"
         a16.Size = New Size(145, 145)
         a16.TabIndex = 20
@@ -305,7 +355,7 @@ Partial Class Player
         StatusBar.Font = New Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point)
         StatusBar.Location = New Point(12, 9)
         StatusBar.Name = "StatusBar"
-        StatusBar.Size = New Size(749, 86)
+        StatusBar.Size = New Size(745, 86)
         StatusBar.TabIndex = 25
         StatusBar.Text = "RAHHHH"
         StatusBar.TextAlign = ContentAlignment.TopCenter
@@ -314,7 +364,7 @@ Partial Class Player
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(770, 877)
+        ClientSize = New Size(769, 877)
         Controls.Add(StatusBar)
         Controls.Add(a20)
         Controls.Add(a19)
@@ -341,6 +391,7 @@ Partial Class Player
         Controls.Add(a3)
         Controls.Add(a2)
         Controls.Add(a1)
+        Location = New Point(200, 200)
         Name = "Player"
         Text = "Giocatore"
         CType(a1, ComponentModel.ISupportInitialize).EndInit()
