@@ -60,7 +60,7 @@ Partial Class Quiz
         ' ImageView
         ' 
         ImageView.BackgroundImageLayout = ImageLayout.Center
-        ImageView.Location = New Point(508, 100)
+        ImageView.Location = New Point(516, 103)
         ImageView.Margin = New Padding(1)
         ImageView.Name = "ImageView"
         ImageView.Size = New Size(405, 369)
